@@ -81,7 +81,7 @@ export default function VideoConsultationPage() {
                   <CheckCircle className="h-8 w-8 text-accent" />
                 </div>
               </div>
-              <h2 className="font-serif text-2xl font-bold mb-3">Video Consultation Requested!</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">Video Consultation Requested!</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Thank you for choosing Amma Eye Care. We'll send you the video call link and appointment details via
                 email or SMS within 24 hours.
@@ -107,14 +107,14 @@ export default function VideoConsultationPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-secondary py-12 md:py-16">
+      <section className="bg-gradient-to-br from-accent via-[#ef4444] to-[#f87171] text-primary-foreground py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <Video className="h-6 w-6 text-accent" />
-              <h1 className="font-serif text-3xl md:text-5xl font-bold">Video Consultation</h1>
+            <div className="flex items-center gap-3 mb-4">
+              <Video className="h-7 w-7" />
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">Video Consultation</h1>
             </div>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg leading-relaxed opacity-95 text-pretty">
               Consult with our expert ophthalmologists from the comfort of your home. Convenient, safe, and professional
               eye care advice through video call.
             </p>

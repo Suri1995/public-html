@@ -71,12 +71,12 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-secondary py-16 md:py-20">
+      <section className="bg-gradient-to-br from-primary via-[#2563eb] to-[#60a5fa] text-primary-foreground py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Get in touch with our team. We're here to answer your questions and schedule your visit.
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Get in Touch</h1>
+            <p className="text-base md:text-lg leading-relaxed opacity-95 text-pretty">
+              Our team is here to answer your questions and help you schedule your visit. Contact us today!
             </p>
           </div>
         </div>

@@ -106,14 +106,14 @@ export default function AppointmentPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-secondary py-12 md:py-16">
+      <section className="bg-gradient-to-br from-primary via-[#2563eb] to-[#60a5fa] text-primary-foreground py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <Calendar className="h-6 w-6 text-primary" />
-              <h1 className="font-serif text-3xl md:text-5xl font-bold">Book an Appointment</h1>
+            <div className="flex items-center gap-3 mb-4">
+              <Calendar className="h-7 w-7" />
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">Book Your Appointment</h1>
             </div>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg leading-relaxed opacity-95 text-pretty">
               Schedule your visit with our expert ophthalmologists. Fill out the form below and we'll confirm your
               appointment within 24 hours.
             </p>

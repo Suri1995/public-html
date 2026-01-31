@@ -121,7 +121,7 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Our Expert Team</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Our Expert Team</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Experienced ophthalmologists and dedicated staff committed to your vision health
             </p>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                     <Users className="h-12 w-12 text-primary" />
                   </div>
                 </div>
-                <h3 className="font-serif text-2xl font-bold mb-3">Meet Our Specialists</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-3">Meet Our Specialists</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Our team of board-certified ophthalmologists brings decades of combined experience in various
                   subspecialties including cataract surgery, refractive surgery, glaucoma management, retinal care, and
@@ -155,10 +155,10 @@ export default function AboutPage() {
       </section>
 
       {/* Technology */}
-      <section className="py-16 bg-secondary">
+      <section className="py-16" style={{ backgroundImage: "linear-gradient(135deg, #f0f9ff, #e0f2fe)" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">State-of-the-Art Technology</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">State-of-the-Art Technology</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               We invest continuously in the latest diagnostic and surgical equipment to ensure the most accurate
               diagnoses and effective treatments. Our advanced technology includes OCT scanners for retinal imaging,
@@ -198,9 +198,9 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <Card className="bg-primary text-primary-foreground">
+            <Card className="bg-gradient-to-r from-primary to-[#2563eb] text-primary-foreground border-0">
             <CardContent className="p-8 md:p-12 text-center">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Experience the Difference</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Experience the Difference</h2>
               <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
                 Join thousands of satisfied patients who trust us with their vision. Schedule your appointment today.
               </p>
