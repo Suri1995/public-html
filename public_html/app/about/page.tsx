@@ -34,11 +34,13 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-secondary py-16 md:py-20">
+      <section className="bg-gradient-to-br from-primary via-[#2563eb] to-[#60a5fa] text-primary-foreground py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">About Amma Eye Care Hospital</h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">
+              About <span className="text-accent drop-shadow-[0_0_12px_rgba(255,255,255,0.6)]">Amma Eye Care</span>
+            </h1>
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed opacity-95 text-pretty">
               Dedicated to preserving and enhancing vision through exceptional eye care, advanced technology, and
               compassionate service for over 25 years.
             </p>
@@ -51,7 +53,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Story</h2>
               <div className="prose prose-lg max-w-none space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Founded with a vision to make world-class eye care accessible to everyone, Amma Eye Care Hospital has
@@ -83,10 +85,15 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-16 bg-muted/50">
+      <section 
+        className="py-12 md:py-16"
+        style={{
+          backgroundImage: "linear-gradient(90deg, #dcf5ff, rgba(220, 245, 255, 0.8))"
+        }}
+      >
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Our Core Values</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
@@ -97,8 +104,8 @@ export default function AboutPage() {
               <Card key={index}>
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary">
-                      <value.icon className="h-7 w-7 text-primary-foreground" />
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                      <value.icon className="h-7 w-7 text-primary" />
                     </div>
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{value.title}</h3>

@@ -10,12 +10,12 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-card shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src="public/logo-amma.png"
+              src="/logo-5b1-5damma.png"
               alt="Amma Eye Care Hospital"
               width={200}
               height={50}
@@ -25,27 +25,27 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+          <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Home
             </Link>
-            <Link href="/services" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Services
             </Link>
-            <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
-              About Us
+            <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              About
             </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Contact
             </Link>
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/video-consultation">Video Consult</Link>
-            </Button>
-            <Button size="sm" asChild>
+            <Button variant="outline" size="sm" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <Link href="/appointment">Book Appointment</Link>
+            </Button>
+            <Button size="sm" asChild className="bg-primary hover:bg-primary/90">
+              <Link href="/video-consultation">Video Consult</Link>
             </Button>
           </div>
 
@@ -57,7 +57,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-4">
+          <div className="md:hidden py-4 space-y-4 border-t border-border">
             <Link
               href="/"
               className="block py-2 text-sm font-medium hover:text-primary"
@@ -77,7 +77,7 @@ export function Navigation() {
               className="block py-2 text-sm font-medium hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About Us
+              About
             </Link>
             <Link
               href="/contact"
@@ -87,11 +87,11 @@ export function Navigation() {
               Contact
             </Link>
             <div className="flex flex-col gap-2 pt-2">
-              <Button variant="outline" asChild className="w-full bg-transparent">
-                <Link href="/video-consultation">Video Consult</Link>
-              </Button>
-              <Button asChild className="w-full">
+              <Button variant="outline" asChild className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 <Link href="/appointment">Book Appointment</Link>
+              </Button>
+              <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                <Link href="/video-consultation">Video Consult</Link>
               </Button>
             </div>
           </div>

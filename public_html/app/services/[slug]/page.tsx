@@ -14,8 +14,9 @@ export function generateStaticParams() {
   }))
 }
 
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
-  const service = serviceData[params.slug]
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const service = serviceData[slug]
 
   if (!service) {
     notFound()
@@ -26,22 +27,22 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-secondary py-12 md:py-16">
+      <section className="bg-gradient-to-br from-primary via-[#2563eb] to-[#60a5fa] text-primary-foreground py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-              <Link href="/" className="hover:text-primary">
+            <div className="flex items-center gap-2 text-sm text-primary-foreground/80 mb-4">
+              <Link href="/" className="hover:text-primary-foreground">
                 Home
               </Link>
               <span>/</span>
-              <Link href="/services" className="hover:text-primary">
+              <Link href="/services" className="hover:text-primary-foreground">
                 Services
               </Link>
               <span>/</span>
               <span>{service.title}</span>
             </div>
-            <h1 className="font-serif text-3xl md:text-5xl font-bold mb-4">{service.title}</h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">{service.intro}</p>
+            <h1 className="font-sans text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{service.title}</h1>
+            <p className="text-base md:text-lg leading-relaxed opacity-95">{service.intro}</p>
           </div>
         </div>
       </section>
