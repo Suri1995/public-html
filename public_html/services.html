@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Amma Eye Care Hospital</title>
+  <meta name="description" content="Comprehensive eye care services including cataract surgery, LASIK, glaucoma treatment, and more.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .services-content {
+      padding: 3rem 1rem 6rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .nav-menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+    .category-section {
+      margin-bottom: 3rem;
+    }
+
+    .category-section h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .accordion {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      background: white;
+      padding: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+
+    .accordion-header:hover {
+      background: var(--surface);
+    }
+
+    .accordion-header h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .accordion-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+      transition: transform 0.3s;
+    }
+
+    .accordion.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background: var(--surface);
+    }
+
+    .accordion-content-inner {
+      padding: 1.25rem;
+    }
+
+    .accordion-content p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .accordion-content .btn {
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 769px) {
+      .services-grid-desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .accordion {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+       <img src="public/logo-5b1-5damma.png" alt="Amma Eye Care Hospital"
+      </a>
+      
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <a href="appointment.html" class="btn btn-outline">Book Appointment</a>
+        <a href="video-consultation.html" class="btn btn-primary">Video Consult</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Comprehensive Eye Care Services</h1>
+      <p>25+ specialized services for all your vision needs</p>
+    </div>
+  </section>
+
+  <!-- Services Content -->
+  <section class="services-content">
+    <!-- Surgical Services -->
+    <div class="category-section">
+      <h2>Surgical Services</h2>
+      <div class="services-grid-desktop">
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Cataract Surgery</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Advanced bladeless phacoemulsification with premium IOL options including multifocal and toric lenses for astigmatism correction.</p>
+              <a href="service-detail.html?slug=cataract-surgery" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>LASIK Surgery</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Blade-free LASIK with wavefront technology for precise vision correction. Say goodbye to glasses and contacts permanently.</p>
+              <a href="service-detail.html?slug=lasik-surgery" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>ICL (Implantable Contact Lens)</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Perfect for high myopia and those not suitable for LASIK. Reversible vision correction procedure.</p>
+              <a href="service-detail.html?slug=icl-surgery" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Retinal Surgery</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Advanced vitreoretinal procedures for retinal detachment, macular holes, and other retinal conditions.</p>
+              <a href="service-detail.html?slug=retinal-surgery" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Corneal Transplant</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Full and partial thickness corneal transplants for various corneal diseases and injuries.</p>
+              <a href="service-detail.html?slug=corneal-transplant" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Glaucoma Surgery</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Minimally invasive glaucoma surgery (MIGS) and traditional procedures to control eye pressure.</p>
+              <a href="service-detail.html?slug=glaucoma-surgery" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medical Treatment Services -->
+    <div class="category-section">
+      <h2>Medical Treatment Services</h2>
+      <div class="services-grid-desktop">
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Glaucoma Treatment</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Comprehensive glaucoma management with medications, laser therapy, and regular monitoring to prevent vision loss.</p>
+              <a href="service-detail.html?slug=glaucoma-treatment" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Diabetic Retinopathy Screening</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Regular screening and treatment for diabetic patients to prevent and manage diabetic eye disease.</p>
+              <a href="service-detail.html?slug=diabetic-retinopathy-screening" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Dry Eye Treatment</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Advanced treatments for chronic dry eyes including punctal plugs, IPL therapy, and prescription medications.</p>
+              <a href="service-detail.html?slug=dry-eye-treatment" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Digital Eye Strain Treatment</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Relief from computer vision syndrome with specialized glasses, treatments, and workplace ergonomic advice.</p>
+              <a href="service-detail.html?slug=digital-eye-strain-treatment" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Age-Related Macular Degeneration</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Advanced treatment options for AMD including anti-VEGF injections and monitoring programs.</p>
+              <a href="service-detail.html?slug=amd-treatment" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Eye Infection Treatment</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Treatment for conjunctivitis, keratitis, uveitis, and other eye infections with advanced diagnostic tools.</p>
+              <a href="service-detail.html?slug=eye-infection-treatment" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diagnostic Services -->
+    <div class="category-section">
+      <h2>Diagnostic Services</h2>
+      <div class="services-grid-desktop">
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Comprehensive Eye Examination</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Complete eye health assessment including vision testing, eye pressure measurement, and dilated examination.</p>
+              <a href="service-detail.html?slug=comprehensive-eye-exam" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>OCT Scan</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Optical Coherence Tomography for detailed imaging of retina and optic nerve for early disease detection.</p>
+              <a href="service-detail.html?slug=oct-scan" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Visual Field Testing</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Computerized perimetry to detect and monitor glaucoma and other conditions affecting peripheral vision.</p>
+              <a href="service-detail.html?slug=visual-field-testing" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Fundus Photography</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>High-resolution retinal imaging for documentation and monitoring of retinal conditions.</p>
+              <a href="service-detail.html?slug=fundus-photography" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Computerized Eye Testing</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Automated refraction and corneal topography for precise prescription and surgical planning.</p>
+              <a href="service-detail.html?slug=computerized-eye-testing" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Corneal Topography</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Detailed mapping of corneal surface for keratoconus detection and LASIK screening.</p>
+              <a href="service-detail.html?slug=corneal-topography" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specialized Care -->
+    <div class="category-section">
+      <h2>Specialized Care</h2>
+      <div class="services-grid-desktop">
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Children's Eye Care</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Pediatric ophthalmology including amblyopia treatment, strabismus correction, and child-friendly examinations.</p>
+              <a href="service-detail.html?slug=childrens-eye-care" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Squint (Strabismus) Treatment</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Medical and surgical management of eye misalignment for both children and adults.</p>
+              <a href="service-detail.html?slug=squint-treatment" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Low Vision Aids</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Specialized optical and electronic devices to maximize remaining vision for daily activities.</p>
+              <a href="service-detail.html?slug=low-vision-aids" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Contact Lens Fitting</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Expert fitting for all types of contact lenses including specialty lenses for keratoconus and post-surgical patients.</p>
+              <a href="service-detail.html?slug=contact-lens-fitting" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Eyeglass Prescription</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Accurate prescriptions with wide selection of frames and specialized lens options including progressive and blue-light blocking.</p>
+              <a href="service-detail.html?slug=eyeglass-prescription" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Second Opinion Consultations</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Expert second opinions on diagnosis and treatment plans from our experienced ophthalmologists.</p>
+              <a href="service-detail.html?slug=second-opinion" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Services -->
+    <div class="category-section">
+      <h2>Additional Services</h2>
+      <div class="services-grid-desktop">
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Lasik Candidate Evaluation</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Comprehensive evaluation to determine if you're a suitable candidate for LASIK surgery.</p>
+              <a href="service-detail.html?slug=lasik-evaluation" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Pre-Surgery Counseling</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Detailed consultation to prepare you mentally and physically for eye surgery procedures.</p>
+              <a href="service-detail.html?slug=pre-surgery-counseling" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Post-Operative Care</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>Comprehensive follow-up care after surgery to ensure optimal healing and results.</p>
+              <a href="service-detail.html?slug=post-operative-care" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion(this)">
+          <div class="accordion-header">
+            <h3>Emergency Eye Care</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              <p>24/7 emergency services for eye injuries, sudden vision loss, and acute eye conditions.</p>
+              <a href="service-detail.html?slug=emergency-eye-care" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Amma Eye Care Hospital</h3>
+        <p>Providing world-class eye care services with compassion and expertise.</p>
+        <div class="social-links">
+  <!-- YouTube -->
+  <a href="https://www.youtube.com/@AmmaEyeCareHospitalHyderabad" target="_blank" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" class="icon youtube">
+      <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.7-.8-1.6-.8-2-.9C17.9 2.7 12 2.7 12 2.7s-5.9 0-8.7.3c-.4.1-1.3.1-2 .9C.7 4.6.5 6.2.5 6.2S0 8.1 0 10v1.9c0 1.9.5 3.8.5 3.8s.2 1.6.8 2.3c.7.8 1.8.8 2.2.9 1.6.2 8.5.3 8.5.3s5.9 0 8.7-.3c.4-.1 1.3-.1 2-.9.6-.7.8-2.3.8-2.3s.5-1.9.5-3.8V10c0-1.9-.5-3.8-.5-3.8zM9.6 13.9V7.9l6.4 3-6.4 3z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/profile.php?id=100054507757497" target="_blank" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" class="icon facebook">
+      <path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24h11.5v-9.3H9.7V11h3.1V8.3c0-3.1 1.9-4.8 4.6-4.8 1.3 0 2.4.1 2.7.1v3.2h-1.9c-1.5 0-1.8.7-1.8 1.7V11h3.6l-.5 3.7h-3.1V24h6.1c.7 0 1.3-.6 1.3-1.3V1.3C24 .6 23.4 0 22.7 0z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/ammaeyecarehospital/" target="_blank" aria-label="Instagram" class="instagram">
+    <svg viewBox="0 0 24 24" class="icon">
+      <defs>
+        <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#feda75"/>
+          <stop offset="25%" stop-color="#fa7e1e"/>
+          <stop offset="50%" stop-color="#d62976"/>
+          <stop offset="75%" stop-color="#962fbf"/>
+          <stop offset="100%" stop-color="#4f5bd5"/>
+        </linearGradient>
+      </defs>
+      <path class="ig-path" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.5 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.5-2.3-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.5 1.3-.1 1.7-.1 4.9-.1zm0 3.5a6.3 6.3 0 1 0 0 12.6 6.3 6.3 0 0 0 0-12.6zm0 10.4a4.1 4.1 0 1 1 0-8.2 4.1 4.1 0 0 1 0 8.2zm6.6-10.9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+    </svg>
+  </a>
+</div>
+
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="service-detail.html?slug=cataract-surgery">Cataract Surgery</a></li>
+          <li><a href="service-detail.html?slug=lasik-surgery">LASIK Surgery</a></li>
+          <li><a href="service-detail.html?slug=glaucoma-treatment">Glaucoma Treatment</a></li>
+          <li><a href="service-detail.html?slug=childrens-eye-care">Children's Eye Care</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+91 92464 46244">+91 9246446244 </a></li>
+          <li><a href="mailto:ammaeyecarehospital@gmail.com">ammaeyecarehospital@gmail.com</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="video-consultation.html">Video Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    
+   <div class="footer-bottom">
+  <div class="container">
+    <p class="copyright-text">© 2026 Amma Eye Care Hospital. All rights reserved.</p>
+    <p class="dev-credit">
+      Developed by <a href="https://sellute.com" target="_blank" rel="noopener">sellute.com</a>
+    </p>
+  </div>
+</div>
+</footer>
+
+<style>
+  /* Professional Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    /* No black background here, it will take the blue from your footer */
+  }
+
+  .copyright-text {
+    color: #ffffff; /* White copyright */
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    opacity: 0.9;
+  }
+
+  /* Force "Developed by sellute.com" to be ALL WHITE */
+  .dev-credit {
+    color: #ffffff !important; 
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* Removes the blue color from the link and makes it white */
+  .dev-credit a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white underline */
+  }
+
+  .dev-credit a:hover {
+    border-bottom: 1px solid #ffffff; /* Bright underline on hover */
+  }
+</style>
+
+  <!-- Mobile CTA -->
+  <div class="mobile-cta">
+    <a href="appointment.html" class="btn btn-accent">Book Appointment</a>
+    <a href="video-consultation.html" class="btn btn-primary">Video Consult</a>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function toggleAccordion(element) {
+      const isActive = element.classList.contains('active');
+      
+      // Close all accordions
+      document.querySelectorAll('.accordion').forEach(acc => {
+        acc.classList.remove('active');
+        acc.querySelector('.accordion-content').style.maxHeight = null;
+      });
+      
+      // Open clicked accordion if it wasn't active
+      if (!isActive) {
+        element.classList.add('active');
+        const content = element.querySelector('.accordion-content');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    }
+  </script>
+</body>
+</html>

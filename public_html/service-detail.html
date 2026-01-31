@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details - Amma Eye Care Hospital</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .service-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+      color: white;
+      padding: 3rem 1rem;
+    }
+
+    .service-header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .service-icon-large {
+      font-size: 4rem;
+    }
+
+    .service-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .breadcrumb {
+      display: flex;
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      color: white;
+    }
+
+    .service-content {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem 6rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+    }
+
+    .service-main {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .content-section {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .content-section h2 {
+      color: var(--primary);
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .content-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .content-section li {
+      padding: 0.75rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .content-section li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item h3 {
+      color: var(--primary);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .cta-box {
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-box .btn {
+      width: 100%;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .info-box h4 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .info-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-box li {
+      padding: 0.5rem 0;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .service-content {
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+      }
+
+      .service-header h1 {
+        font-size: 1.75rem;
+      }
+
+      .sidebar {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+       <img src="public/logo-5b1-5damma.png" alt="Amma Eye Care Hospital"
+      </a>
+      
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <a href="appointment.html" class="btn btn-outline">Book Appointment</a>
+        <a href="video-consultation.html" class="btn btn-primary">Video Consult</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Service Header -->
+  <section class="service-header">
+    <div class="service-header-content">
+      <div class="service-icon-large" id="serviceIcon">👁️</div>
+      <div>
+        <h1 id="serviceName">Loading...</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="services.html">Services</a>
+          <span>/</span>
+          <span id="breadcrumbName">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Content -->
+  <div class="service-content">
+    <!-- Main Content -->
+    <div class="service-main">
+      <!-- Overview -->
+      <div class="content-section">
+        <h2>Overview</h2>
+        <p id="overview">Loading...</p>
+      </div>
+
+      <!-- Who Needs This -->
+      <div class="content-section">
+        <h2>Who Needs This Service?</h2>
+        <ul id="whoNeeds"></ul>
+      </div>
+
+      <!-- Diagnosis -->
+      <div class="content-section">
+        <h2>Diagnosis & Testing</h2>
+        <ul id="diagnosis"></ul>
+      </div>
+
+      <!-- Treatment -->
+      <div class="content-section">
+        <h2>Treatment Options</h2>
+        <ul id="treatment"></ul>
+      </div>
+
+      <!-- FAQs -->
+      <div class="content-section">
+        <h2>Frequently Asked Questions</h2>
+        <div id="faqs"></div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- CTA Box -->
+      <div class="cta-box">
+        <h3>Ready to Schedule?</h3>
+        <p>Book your appointment or video consultation today</p>
+        <a href="appointment.html" class="btn btn-accent">Book Appointment</a>
+        <a href="video-consultation.html" class="btn btn-primary">Video Consult</a>
+      </div>
+
+      <!-- Info Box -->
+      <div class="info-box">
+        <h4>Why Choose Us?</h4>
+        <ul>
+          <li>✓ Expert Ophthalmologists</li>
+          <li>✓ Advanced Technology</li>
+          <li>✓ Insurance Accepted</li>
+          <li>✓ Affordable Care</li>
+          <li>✓ Quick Appointments</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="info-box">
+        <h4>Need Help?</h4>
+        <ul>
+          <li>📞 +91 9246446244</li>
+          <li>✉️ ammaeyecarehospital@gmail.com</li>
+          <li>🕐 Mon-Sat: 8AM-8PM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Amma Eye Care Hospital</h3>
+        <p>Providing world-class eye care services with compassion and expertise.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="service-detail.html?slug=cataract-surgery">Cataract Surgery</a></li>
+          <li><a href="service-detail.html?slug=lasik-surgery">LASIK Surgery</a></li>
+          <li><a href="service-detail.html?slug=glaucoma-treatment">Glaucoma Treatment</a></li>
+          <li><a href="service-detail.html?slug=childrens-eye-care">Children's Eye Care</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+91 9246446244">+91 9246446244</a></li>
+          <li><a href="mailto:ammaeyecarehospital@gmail.com">ammaeyecarehospital@gmail.com</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="video-consultation.html">Video Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Amma Eye Care Hospital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile CTA -->
+  <div class="mobile-cta">
+    <a href="appointment.html" class="btn btn-accent">Book Appointment</a>
+    <a href="video-consultation.html" class="btn btn-primary">Video Consult</a>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/service-data.js"></script>
+  <script>
+    // Get slug from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const slug = urlParams.get('slug');
+
+    // Load service data
+    if (slug && serviceData[slug]) {
+      const service = serviceData[slug];
+      
+      // Update header
+      document.getElementById('serviceIcon').textContent = service.icon;
+      document.getElementById('serviceName').textContent = service.name;
+      document.getElementById('breadcrumbName').textContent = service.name;
+      document.title = `${service.name} - Amma Eye Care Hospital`;
+      
+      // Update overview
+      document.getElementById('overview').textContent = service.overview;
+      
+      // Update who needs
+      const whoNeedsList = document.getElementById('whoNeeds');
+      service.whoNeeds.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        whoNeedsList.appendChild(li);
+      });
+      
+      // Update diagnosis
+      const diagnosisList = document.getElementById('diagnosis');
+      service.diagnosis.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        diagnosisList.appendChild(li);
+      });
+      
+      // Update treatment
+      const treatmentList = document.getElementById('treatment');
+      service.treatment.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        treatmentList.appendChild(li);
+      });
+      
+      // Update FAQs
+      const faqsContainer = document.getElementById('faqs');
+      service.faqs.forEach(faq => {
+        const faqItem = document.createElement('div');
+        faqItem.className = 'faq-item';
+        faqItem.innerHTML = `
+          <h3>${faq.q}</h3>
+          <p>${faq.a}</p>
+        `;
+        faqsContainer.appendChild(faqItem);
+      });
+    } else {
+      // Service not found
+      document.querySelector('.service-main').innerHTML = `
+        <div class="content-section">
+          <h2>Service Not Found</h2>
+          <p>The requested service could not be found.</p>
+          <a href="services.html" class="btn btn-primary">View All Services</a>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>

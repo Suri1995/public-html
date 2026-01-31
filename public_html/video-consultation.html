@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Consultation - Amma Eye Care Hospital</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .form-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1rem 6rem;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .form-header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-header p {
+      color: var(--text-muted);
+      font-size: 1.125rem;
+    }
+
+    .form-container {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .form-group label .required {
+      color: var(--accent);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .file-input-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .file-input-wrapper input[type=file] {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .file-input-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border: 2px dashed var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: border-color 0.2s;
+      color: var(--text-muted);
+    }
+
+    .file-input-label:hover {
+      border-color: var(--primary);
+    }
+
+    .file-name {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .info-box {
+      background: var(--surface);
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: var(--radius);
+    }
+
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.125rem;
+    }
+
+    .info-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-box li {
+      padding: 0.25rem 0;
+      color: var(--text-muted);
+    }
+
+    .success-message,
+    .error-message {
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .success-message {
+      background: #d1fae5;
+      color: #065f46;
+      border: 1px solid #10b981;
+    }
+
+    .error-message {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #ef4444;
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="public/logo-5b1-5damma.png" alt="Amma Eye Care Hospital">
+      </a>
+      
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <a href="appointment.html" class="btn btn-outline">Book Appointment</a>
+        <a href="video-consultation.html" class="btn btn-primary">Video Consult</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Form Content -->
+  <div class="form-page">
+    <div class="form-header">
+      <h1>Book Video Consultation</h1>
+      <p>Connect with our expert ophthalmologists from the comfort of your home</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Requirements for Video Consultation</h3>
+      <ul>
+        <li>✓ Stable internet connection</li>
+        <li>✓ Device with camera and microphone (smartphone, tablet, or computer)</li>
+        <li>✓ Good lighting in the room</li>
+        <li>✓ Medical records and previous prescriptions (if applicable)</li>
+      </ul>
+    </div>
+
+    <div id="successMessage" class="success-message"></div>
+    <div id="errorMessage" class="error-message"></div>
+
+    <div class="form-container">
+      <form id="videoConsultForm" onsubmit="handleVideoConsultSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name <span class="required">*</span></label>
+            <input type="text" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name <span class="required">*</span></label>
+            <input type="text" name="lastName" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email <span class="required">*</span></label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Phone <span class="required">*</span></label>
+            <input type="tel" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date of Birth <span class="required">*</span></label>
+            <input type="date" name="dob" required>
+          </div>
+          <div class="form-group">
+            <label>Age <span class="required">*</span></label>
+            <input type="number" name="age" required min="1" max="120">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Preferred Date <span class="required">*</span></label>
+            <input type="date" name="consultDate" required min="">
+          </div>
+          <div class="form-group">
+            <label>Preferred Time <span class="required">*</span></label>
+            <select name="consultTime" required>
+              <option value="">Select time</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="09:30">9:30 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="10:30">10:30 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="11:30">11:30 AM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="14:30">2:30 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="15:30">3:30 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="16:30">4:30 PM</option>
+              <option value="17:00">5:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Consultation Type <span class="required">*</span></label>
+          <select name="consultType" required>
+            <option value="">Select consultation type</option>
+            <option value="First-time consultation">First-time consultation</option>
+            <option value="Follow-up consultation">Follow-up consultation</option>
+            <option value="Second opinion">Second opinion</option>
+            <option value="Prescription renewal">Prescription renewal</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Service Needed <span class="required">*</span></label>
+          <select name="service" required>
+            <option value="">Select service</option>
+            <option value="General Eye Examination">General Eye Examination</option>
+            <option value="Cataract Consultation">Cataract Consultation</option>
+            <option value="LASIK Consultation">LASIK Consultation</option>
+            <option value="Glaucoma Management">Glaucoma Management</option>
+            <option value="Diabetic Retinopathy">Diabetic Retinopathy</option>
+            <option value="Digital Eye Strain">Digital Eye Strain</option>
+            <option value="Dry Eye Treatment">Dry Eye Treatment</option>
+            <option value="Children's Eye Care">Children's Eye Care</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Reports (Previous prescriptions, test results, eye photos)</label>
+          <div class="file-input-wrapper">
+            <input type="file" id="reportFileVideo" name="reportFile" accept=".pdf,.jpg,.jpeg,.png" onchange="updateFileNameVideo(this)">
+            <label for="reportFileVideo" class="file-input-label">
+              <span>📎 Choose file</span>
+              <span>or drag and drop</span>
+            </label>
+          </div>
+          <div id="fileNameVideo" class="file-name"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Current Symptoms / Reason for Consultation <span class="required">*</span></label>
+          <textarea name="symptoms" required placeholder="Please describe your symptoms in detail"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Current Medications</label>
+          <textarea name="medications" placeholder="List any eye drops or medications you're currently using"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Medical History</label>
+          <textarea name="medicalHistory" placeholder="Previous eye surgeries, diabetes, hypertension, allergies, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
+          Book Video Consultation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Amma Eye Care Hospital</h3>
+        <p>Providing world-class eye care services with compassion and expertise.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="service-detail.html?slug=cataract-surgery">Cataract Surgery</a></li>
+          <li><a href="service-detail.html?slug=lasik-surgery">LASIK Surgery</a></li>
+          <li><a href="service-detail.html?slug=glaucoma-treatment">Glaucoma Treatment</a></li>
+          <li><a href="service-detail.html?slug=childrens-eye-care">Children's Eye Care</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+1234567890">+91 9246446244</a></li>
+          <li><a href="mailto:info@ammaeyecare.com">ammaeyecarehospital@gmail.com</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="video-consultation.html">Video Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+    <p class="copyright-text">© 2026 Amma Eye Care Hospital. All rights reserved.</p>
+    <p class="dev-credit">
+      Developed by <a href="https://sellute.com" target="_blank" rel="noopener">sellute.com</a>
+    </p>
+  </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.querySelector('input[name="consultDate"]').setAttribute('min', today);
+
+    function updateFileNameVideo(input) {
+      const fileNameDisplay = document.getElementById('fileNameVideo');
+      if (input.files && input.files[0]) {
+        fileNameDisplay.textContent = `Selected: ${input.files[0].name}`;
+      } else {
+        fileNameDisplay.textContent = '';
+      }
+    }
+
+    async function handleVideoConsultSubmit(event) {
+      event.preventDefault();
+      
+      const form = event.target;
+      const formData = new FormData(form);
+      const submitButton = form.querySelector('button[type="submit"]');
+      
+      // Disable submit button
+      submitButton.disabled = true;
+      submitButton.textContent = 'Booking...';
+      
+      try {
+        const response = await fetch('api/book-video-consultation.php', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          document.getElementById('successMessage').textContent = result.message || 'Video consultation booked successfully! We will send you the meeting link shortly.';
+          document.getElementById('successMessage').style.display = 'block';
+          document.getElementById('errorMessage').style.display = 'none';
+          form.reset();
+          document.getElementById('fileNameVideo').textContent = '';
+        } else {
+          throw new Error(result.message || 'Failed to book video consultation');
+        }
+      } catch (error) {
+        document.getElementById('errorMessage').textContent = error.message || 'An error occurred. Please try again or call us directly.';
+        document.getElementById('errorMessage').style.display = 'block';
+        document.getElementById('successMessage').style.display = 'none';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Book Video Consultation';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amma Eye Care Hospital - Advanced Eye Care Services</title>
+  <meta name="description" content="Comprehensive eye care services including cataract surgery, LASIK, children's eye care, and more. Expert ophthalmologists with advanced technology.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+       <img src="public/logo-5b1-5damma.png" alt="Amma Eye Care Hospital"
+      </a>
+      
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <a href="appointment.html" class="btn btn-outline">Book Appointment</a>
+        <a href="video-consultation.html" class="btn btn-primary">Video Consult</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Advanced <span class="accent">Eye Care</span> for All Ages</h1>
+        <p>From routine check-ups to advanced surgeries, experience world-class eye care with our expert team of ophthalmologists.</p>
+        <div class="hero-cta">
+          <a href="appointment.html" class="btn btn-accent">Book Appointment</a>
+          <a href="video-consultation.html" class="btn btn-outline">Video Consultation</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="public/modern-eye-care-hospital-reception-area.jpg" alt="Modern Eye Care Hospital">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Posters Section -->
+  <section
+  style="
+    background-image: radial-gradient(352.28% 126.05% at 23.26% 0, #a5f2f0 23.48%, #ddf9b6 100%);
+    padding: 60px 0;
+    overflow: hidden;
+  "
+>
+  <div style="width:100%; overflow:hidden;">
+    <div
+      id="marqueeTrack"
+      style="
+        display:flex;
+        width:max-content;
+        will-change:transform;
+      "
+    >
+      <img src="public/poster1-image.png"
+        style="width:500px; max-width:90vw; border-radius:32px; flex-shrink:0; margin-right:24px;">
+
+      <img src="public/poster2-image.png"
+        style="width:500px; max-width:90vw; border-radius:32px; flex-shrink:0; margin-right:24px;">
+        
+        <img src="public/poster3-image.png"
+        style="width:500px; max-width:90vw; border-radius:32px; flex-shrink:0; margin-right:24px;">
+    </div>
+  </div>
+</section>
+
+  <!-- Trust Indicators -->
+  <section class="trust-indicators">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <div class="trust-text">
+          <h3>25+ Specialized Services</h3>
+          <p>Comprehensive eye care solutions</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <div class="trust-text">
+          <h3>Advanced Technology</h3>
+          <p>Latest diagnostic & surgical equipment</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <div class="trust-text">
+          <h3>Insurance Accepted</h3>
+          <p>Most major insurance plans covered</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <div class="trust-text">
+          <h3>Expert Ophthalmologists</h3>
+          <p>Experienced & caring specialists</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <h2 style="color: #6a1818; margin-bottom: -5.2px">Our Top Services</h2>
+      <p style="color: #625b5b; display: flex; justify-content: center; margin-bottom: 36px">Comprehensive eye care solutions for every need</p>
+      
+      <div class="services-grid">
+        <a href="service-detail.html?slug=cataract-surgery" class="service-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="">
+          <div class="service-icon">👁️</div>
+          <h3>Cataract Surgery</h3>
+          <p>Advanced phacoemulsification with premium IOLs. Restore your vision with our bladeless, painless procedure.</p>
+          </div>
+          <span class="service-link">Learn More →</span>
+        </a>
+        
+        <a href="service-detail.html?slug=lasik-surgery" class="service-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="">
+          <div class="service-icon">👓</div>
+          <h3>LASIK Surgery</h3>
+          <p>Blade-free LASIK for permanent vision correction. Say goodbye to glasses and contacts.</p>
+          </div>
+          <span class="service-link">Learn More →</span>
+        </a>
+        
+        <a href="service-detail.html?slug=glaucoma-treatment" class="service-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="service-icon">🔍</div>
+          <h3>Glaucoma Treatment</h3>
+          <p>Early detection and advanced treatment to prevent vision loss from glaucoma.</p>
+          </div>
+          <span class="service-link">Learn More →</span>
+        </a>
+        
+        <a href="service-detail.html?slug=childrens-eye-care" class="service-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="">
+          <div class="service-icon">👶</div>
+          <h3>Children's Eye Care</h3>
+          <p>Specialized pediatric ophthalmology with child-friendly approach and facilities.</p>
+          </div>
+          <span class="service-link">Learn More →</span>
+        </a>
+        
+        <a href="service-detail.html?slug=diabetic-retinopathy-screening" class="service-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="">
+          <div class="service-icon">📊</div>
+          <h3>Diabetic Retinopathy</h3>
+          <p>Regular screening and treatment to protect your vision if you have diabetes.</p>
+          </div>
+          <span class="service-link">Learn More →</span>
+        </a>
+        
+        <a href="service-detail.html?slug=digital-eye-strain-treatment" class="service-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="">
+          <div class="service-icon">💻</div>
+          <h3>Digital Eye Strain</h3>
+          <p>Relief from computer vision syndrome with specialized treatment and blue light solutions.</p>
+          </div>
+          <span class="service-link">Learn More →</span>
+        </a>
+      </div>
+      
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="services.html" class="btn btn-primary">View All Services</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonial -->
+ <section style="background-image: linear-gradient(90deg, #dcf5ff, rgba(220, 245, 255, 0.8)); ">
+<div style="font-family:Inter, Arial, sans-serif; overflow:hidden; width: 100%; max-width: 1200px; margin: 0 auto; padding: 80px 1rem;">
+  <!-- Heading + Buttons Row -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:50px;">
+    <h2 class="testimonials-heading">
+      Client Testimonials
+    </h2>
+
+    <!-- Arrow buttons -->
+    <div style="display:flex; gap:10px;">
+      <button id="prev" style="background:#355C9D; color:#fff; border:none; padding:10px 15px; border-radius:100%; cursor:pointer;">&#10094;</button>
+      <button id="next" style="background:#355C9D; color:#fff; border:none; padding:10px 15px; border-radius:100%; cursor:pointer;">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Carousel container -->
+  <div id="viewport" style="width:100%; overflow:hidden; position:relative; padding-bottom: 20px">
+    <div id="slider" style="display:flex; gap:30px; transition: transform 0.5s ease;">
+      
+      <!-- Cards 1 -->
+      <div style="flex:0 0 calc((100% - 60px)/3); background:#fff; border-radius:16px; padding:28px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <img src="public/quotes-icon.svg" style="width:26px; margin-bottom:14px;">
+          <h3 style="margin:0 0 10px; font-size:18px; font-weight:600;">I left "AMMA Hospital with confidence!"</h3>
+          <p style="font-size:15px; line-height:1.6; color:#526B8C;">
+            I recently underwent vision correction at AMMA Hospital and was thoroughly impressed with the quality of service...
+            <a href="https://www.google.com/maps/place/Amma+Eye+Care+Hospital/@17.3412647,78.555624,842m/data=!3m1!1e3!4m8!3m7!1s0x3bcb98a906c50f4f:0x27f26d05063b4290!8m2!3d17.3412596!4d78.5581989!9m1!1b1!16s%2Fg%2F11bwhbb2n4?entry=ttu&g_ep=EgoyMDI2MDEyNy4wIKXMDSoASAFQAw%3D%3D" style="color:#355C9D; font-weight:600;" target="_blank">Read More</a>
+          </p>
+        </div>
+        <div>
+          <hr style="border:none; border-top:1px dashed #C8D6E5; margin:24px 0;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <img src="public/profile-avatar-icon.svg" style="width:44px; height:44px; border-radius:50%;">
+              <div>
+                <div style="font-weight:600;">JYOTHI REDDY</div>
+              </div>
+            </div>
+            <img src="public/google-review-icon.svg" style="width:40px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards 2 -->
+      <div style="flex:0 0 calc((100% - 60px)/3); background:#fff; border-radius:16px; padding:28px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <img src="public/quotes-icon.svg" style="width:26px; margin-bottom:14px;">
+          <h3 style="margin:0 0 10px; font-size:18px; font-weight:600;">“Trusted care that restored my dad’s eyesight!"</h3>
+          <p style="font-size:15px; line-height:1.6; color:#526B8C;">
+            We had a wonderful experience at Amma Eye Care Hospital, Chintalkunta. My dad underwent cataract surgery for both eyes...
+            <a href="https://www.google.com/maps/place/Amma+Eye+Care+Hospital/@17.3412647,78.555624,842m/data=!3m1!1e3!4m8!3m7!1s0x3bcb98a906c50f4f:0x27f26d05063b4290!8m2!3d17.3412596!4d78.5581989!9m1!1b1!16s%2Fg%2F11bwhbb2n4?entry=ttu&g_ep=EgoyMDI2MDEyNy4wIKXMDSoASAFQAw%3D%3D" style="color:#355C9D; font-weight:600;" target="_blank">Read More</a>
+          </p>
+        </div>
+        <div>
+          <hr style="border:none; border-top:1px dashed #C8D6E5; margin:24px 0;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <img src="public/profile-avatar-icon.svg" style="width:44px; height:44px; border-radius:50%;">
+              <div>
+                <div style="font-weight:600;">Greeshma Kandhala</div>
+              </div>
+            </div>
+            <img src="public/google-review-icon.svg" style="width:40px;">
+          </div>
+        </div>
+      </div>
+
+<!-- Cards 3 -->
+      <div style="flex:0 0 calc((100% - 60px)/3); background:#fff; border-radius:16px; padding:28px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <img src="public/quotes-icon.svg" style="width:26px; margin-bottom:14px;">
+          <h3 style="margin:0 0 10px; font-size:18px; font-weight:600;">"Supportive staff and successful treatment!"</h3>
+          <p style="font-size:15px; line-height:1.6; color:#526B8C;">
+            Hi mam,
+We went for eye surgery in your hospital, it's really good treatment and having nice follow ups with patient. Total...
+            <a href="https://www.google.com/maps/place/Amma+Eye+Care+Hospital/@17.3412647,78.555624,842m/data=!3m1!1e3!4m8!3m7!1s0x3bcb98a906c50f4f:0x27f26d05063b4290!8m2!3d17.3412596!4d78.5581989!9m1!1b1!16s%2Fg%2F11bwhbb2n4?entry=ttu&g_ep=EgoyMDI2MDEyNy4wIKXMDSoASAFQAw%3D%3D" style="color:#355C9D; font-weight:600;" target="_blank">Read More</a>
+          </p>
+        </div>
+        <div>
+          <hr style="border:none; border-top:1px dashed #C8D6E5; margin:24px 0;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <img src="public/profile-avatar-icon.svg" style="width:44px; height:44px; border-radius:50%;">
+              <div>
+                <div style="font-weight:600;">Umamaheswara Rao Goli</div>
+              </div>
+            </div>
+            <img src="public/google-review-icon.svg" style="width:40px;">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cards 4 -->
+      <div style="flex:0 0 calc((100% - 60px)/3); background:#fff; border-radius:16px; padding:28px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <img src="public/quotes-icon.svg" style="width:26px; margin-bottom:14px;">
+          <h3 style="margin:0 0 10px; font-size:18px; font-weight:600;">"Thoughtful care that helped my mother see clearly again.!"</h3>
+          <p style="font-size:15px; line-height:1.6; color:#526B8C;">
+            My mother recently got her right eye cataract surgery done here. The doctor clearly explained her condition and...
+            <a href="https://www.google.com/maps/place/Amma+Eye+Care+Hospital/@17.3412647,78.555624,842m/data=!3m1!1e3!4m8!3m7!1s0x3bcb98a906c50f4f:0x27f26d05063b4290!8m2!3d17.3412596!4d78.5581989!9m1!1b1!16s%2Fg%2F11bwhbb2n4?entry=ttu&g_ep=EgoyMDI2MDEyNy4wIKXMDSoASAFQAw%3D%3D" style="color:#355C9D; font-weight:600;" target="_blank">Read More</a>
+          </p>
+        </div>
+        <div>
+          <hr style="border:none; border-top:1px dashed #C8D6E5; margin:24px 0;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <img src="public/profile-avatar-icon.svg" style="width:44px; height:44px; border-radius:50%;">
+              <div>
+                <div style="font-weight:600;">Brahmani Chowdary</div>
+              </div>
+            </div>
+            <img src="public/google-review-icon.svg" style="width:40px;">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cards 5 -->
+      <div style="flex:0 0 calc((100% - 60px)/3); background:#fff; border-radius:16px; padding:28px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <img src="public/quotes-icon.svg" style="width:26px; margin-bottom:14px;">
+          <h3 style="margin:0 0 10px; font-size:18px; font-weight:600;">"Supportive treatment when I needed it most.!"</h3>
+          <p style="font-size:15px; line-height:1.6; color:#526B8C;">
+            I recently visited this hospital after an eye injury, and the hospital staff were very supportive and kind. A special thanks to ...
+            <a href="https://www.google.com/maps/place/Amma+Eye+Care+Hospital/@17.3412647,78.555624,842m/data=!3m1!1e3!4m8!3m7!1s0x3bcb98a906c50f4f:0x27f26d05063b4290!8m2!3d17.3412596!4d78.5581989!9m1!1b1!16s%2Fg%2F11bwhbb2n4?entry=ttu&g_ep=EgoyMDI2MDEyNy4wIKXMDSoASAFQAw%3D%3D" style="color:#355C9D; font-weight:600;" target="_blank">Read More</a>
+          </p>
+        </div>
+        <div>
+          <hr style="border:none; border-top:1px dashed #C8D6E5; margin:24px 0;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; gap:12px; align-items:center;">
+              <img src="public/profile-avatar-icon.svg" style="width:44px; height:44px; border-radius:50%;">
+              <div>
+                <div style="font-weight:600;">Dinesh Thakkashila</div>
+              </div>
+            </div>
+            <img src="public/google-review-icon.svg" style="width:40px;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  const slider = document.getElementById("slider");
+  const nextBtn = document.getElementById("next");
+  const prevBtn = document.getElementById("prev");
+
+  const gap = 30;              // same as CSS gap
+  const visibleCards = 3;
+  let currentIndex = 0;
+
+  function getCardWidth() {
+    return slider.children[0].offsetWidth + gap;
+  }
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * getCardWidth()}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    const totalCards = slider.children.length;
+    const maxIndex = totalCards - visibleCards;
+
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener("resize", updateSlider);
+</script>
+
+</div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Amma Eye Care Hospital</h3>
+        <p>Providing world-class eye care services with compassion and expertise.</p>
+        <div class="social-links">
+  <!-- YouTube -->
+  <a href="https://www.youtube.com/@AmmaEyeCareHospitalHyderabad" target="_blank" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" class="icon youtube">
+      <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.7-.8-1.6-.8-2-.9C17.9 2.7 12 2.7 12 2.7s-5.9 0-8.7.3c-.4.1-1.3.1-2 .9C.7 4.6.5 6.2.5 6.2S0 8.1 0 10v1.9c0 1.9.5 3.8.5 3.8s.2 1.6.8 2.3c.7.8 1.8.8 2.2.9 1.6.2 8.5.3 8.5.3s5.9 0 8.7-.3c.4-.1 1.3-.1 2-.9.6-.7.8-2.3.8-2.3s.5-1.9.5-3.8V10c0-1.9-.5-3.8-.5-3.8zM9.6 13.9V7.9l6.4 3-6.4 3z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/profile.php?id=100054507757497" target="_blank" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" class="icon facebook">
+      <path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24h11.5v-9.3H9.7V11h3.1V8.3c0-3.1 1.9-4.8 4.6-4.8 1.3 0 2.4.1 2.7.1v3.2h-1.9c-1.5 0-1.8.7-1.8 1.7V11h3.6l-.5 3.7h-3.1V24h6.1c.7 0 1.3-.6 1.3-1.3V1.3C24 .6 23.4 0 22.7 0z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/ammaeyecarehospital/" target="_blank" aria-label="Instagram" class="instagram">
+    <svg viewBox="0 0 24 24" class="icon">
+      <defs>
+        <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#feda75"/>
+          <stop offset="25%" stop-color="#fa7e1e"/>
+          <stop offset="50%" stop-color="#d62976"/>
+          <stop offset="75%" stop-color="#962fbf"/>
+          <stop offset="100%" stop-color="#4f5bd5"/>
+        </linearGradient>
+      </defs>
+      <path class="ig-path" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.5 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.5-2.3-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.5 1.3-.1 1.7-.1 4.9-.1zm0 3.5a6.3 6.3 0 1 0 0 12.6 6.3 6.3 0 0 0 0-12.6zm0 10.4a4.1 4.1 0 1 1 0-8.2 4.1 4.1 0 0 1 0 8.2zm6.6-10.9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+    </svg>
+  </a>
+</div>
+
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="service-detail.html?slug=cataract-surgery">Cataract Surgery</a></li>
+          <li><a href="service-detail.html?slug=lasik-surgery">LASIK Surgery</a></li>
+          <li><a href="service-detail.html?slug=glaucoma-treatment">Glaucoma Treatment</a></li>
+          <li><a href="service-detail.html?slug=childrens-eye-care">Children's Eye Care</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+91 92464 46244">+91 9246446244 </a></li>
+          <li><a href="mailto:ammaeyecarehospital@gmail.com">ammaeyecarehospital@gmail.com</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="video-consultation.html">Video Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    
+   <div class="footer-bottom">
+  <div class="container">
+    <p class="copyright-text">© 2026 Amma Eye Care Hospital. All rights reserved.</p>
+    <p class="dev-credit">
+      Developed by <a href="https://sellute.com" target="_blank" rel="noopener">sellute.com</a>
+    </p>
+  </div>
+</div>
+</footer>
+
+<style>
+ .testimonials-heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-heading {
+      font-size: 32px;
+    }
+    
+    .poster
+  }
+  /* Professional Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    /* No black background here, it will take the blue from your footer */
+  }
+
+  .copyright-text {
+    color: #ffffff; /* White copyright */
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    opacity: 0.9;
+  }
+
+  /* Force "Developed by sellute.com" to be ALL WHITE */
+  .dev-credit {
+    color: #ffffff !important; 
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* Removes the blue color from the link and makes it white */
+  .dev-credit a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white underline */
+  }
+
+  .dev-credit a:hover {
+    border-bottom: 1px solid #ffffff; /* Bright underline on hover */
+  }
+</style>
+  <!-- Mobile CTA -->
+  <div class="mobile-cta">
+    <a href="appointment.html" class="btn btn-accent">Book Appointment</a>
+    <a href="video-consultation.html" class="btn btn-primary">Video Consult</a>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+  const track = document.getElementById("marqueeTrack");
+  let paused = false;
+  let position = 0;
+  let speed = 0.6;
+
+  // Clone items internally (you still write images only once)
+  const originals = Array.from(track.children);
+  originals.forEach(item => track.appendChild(item.cloneNode(true)));
+
+  // Calculate width of ONE full set
+  let setWidth = 0;
+  originals.forEach(item => {
+    setWidth += item.offsetWidth;
+  });
+
+  track.addEventListener("mouseenter", () => paused = true);
+  track.addEventListener("mouseleave", () => paused = false);
+
+  function animate() {
+    if (!paused) {
+      position -= speed;
+
+      if (Math.abs(position) >= setWidth) {
+        position = 0; // seamless reset
+      }
+
+      track.style.transform = `translateX(${position}px)`;
+    }
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // Mobile padding adjustment (inline-only)
+  if (window.innerWidth <= 768) {
+    track.closest("section").style.padding = "32px 0";
+  }
+</script>
+
+
+
+</body>
+</html>
